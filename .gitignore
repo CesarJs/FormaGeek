@@ -1,7 +1,9 @@
-/vendor
+/application/vendor
 
-/node_modules
+/application/node_modules
 
-.json
+/application/.json
 
-.env
+/applicaion/.env
+
+/application/images/img
