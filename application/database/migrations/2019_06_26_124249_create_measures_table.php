@@ -16,7 +16,7 @@ class CreateMeasuresTable extends Migration
 	public function up()
 	{
 		Schema::create('measures', function(Blueprint $table) {
-            $table->increments('id');
+            $table->bigIncrements('id');
             $table->float('neck',8,2);
             $table->float('arm',8,2);
             $table->float('chest',8,2);

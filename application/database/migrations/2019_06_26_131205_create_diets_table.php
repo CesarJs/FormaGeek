@@ -16,14 +16,14 @@ class CreateDietsTable extends Migration
 	public function up()
 	{
 		Schema::create('diets', function(Blueprint $table) {
-            $table->increments('id');
-            $table->unsignedBigInteger('user_id');
-            $table->unsignedBigInteger('food_id');
+            $table->bigIncrements('id');
+            $table->bigInteger('user_id')->unsigned();
+            $table->bigInteger('food_id')->unsigned();
 
             $table->timestamps();
 
-            $table->foreign('user_id')->references('id')->on('users')->onDelete('cascade');
-            $table->foreign('food_id')->references('id')->on('foods')->onDelete('cascade');
+            $table->foreign('user_id')->references('id')->on('users');
+            $table->foreign('food_id')->references('id')->on('foods');
 		});
 	}
 
