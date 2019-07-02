@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file",
         "This file is @generated automatically"
     ],
-    "content-hash": "1590d6c6f6698a8df6761f4cb16d46f5",
+    "content-hash": "3c9c81204c9d2960d544ed08cfc77203",
     "packages": [
         {
             "name": "dnoegel/php-xdg-base-dir",
@@ -514,6 +514,43 @@
             ],
             "description": "Highlight PHP code in terminal",
             "time": "2018-09-29T18:48:56+00:00"
+        },
+        {
+            "name": "jzonta/faker-restaurant",
+            "version": "1.1.0",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/jzonta/FakerRestaurant.git",
+                "reference": "05bed7ad1de5021e06da91dbb02c5f52b4012c84"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/jzonta/FakerRestaurant/zipball/05bed7ad1de5021e06da91dbb02c5f52b4012c84",
+                "reference": "05bed7ad1de5021e06da91dbb02c5f52b4012c84",
+                "shasum": ""
+            },
+            "require": {
+                "fzaninotto/faker": "~1.4",
+                "php": ">=5.3.0"
+            },
+            "type": "library",
+            "autoload": {
+                "psr-4": {
+                    "FakerRestaurant\\": "src"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "João Zonta"
+                }
+            ],
+            "description": "Food and Beverage names generate using fzaninotto/Faker",
+            "homepage": "https://github.com/jzonta/FakerRestaurant",
+            "time": "2019-02-13T10:58:50+00:00"
         },
         {
             "name": "laravel/framework",

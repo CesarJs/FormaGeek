@@ -17,7 +17,8 @@ class CreateFoodsTable extends Migration
 	{
 		Schema::create('foods', function(Blueprint $table) {
             $table->bigIncrements('id');
-            $table->string('name',100);
+            $table->bigInteger('user_id')->unsigned();
+            $table->string('name',100)->unique();
             $table->float('calories',8,2);
             $table->float('proteins',8,2);
             $table->float('carbo',8,2);
@@ -29,6 +30,9 @@ class CreateFoodsTable extends Migration
             $table->integer('status')->default(1);
 
             $table->timestamps();
+
+
+            $table->foreign('user_id')->references('id')->on('users');
 		});
 	}
 

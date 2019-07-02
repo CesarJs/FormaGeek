@@ -23,12 +23,13 @@ class RepositoryServiceProvider extends ServiceProvider
      */
     public function boot()
     {
-        $this->app->bind(\Treina\Models\Repositories\MeasuresRepository::class, \Treina\Models\Repositories\MeasuresRepositoryEloquent::class);
-        $this->app->bind(\Treina\Models\Repositories\FoodsRepository::class, \Treina\Models\Repositories\FoodsRepositoryEloquent::class);
-        $this->app->bind(\Treina\Models\Repositories\DietsRepository::class, \Treina\Models\Repositories\DietsRepositoryEloquent::class);
-        $this->app->bind(\Treina\Models\Repositories\DietRepository::class, \Treina\Models\Repositories\DietRepositoryEloquent::class);
-        $this->app->bind(\Treina\Models\Repositories\MeasureRepository::class, \Treina\Models\Repositories\MeasureRepositoryEloquent::class);
-        $this->app->bind(\Treina\Models\Repositories\FoodRepository::class, \Treina\Models\Repositories\FoodRepositoryEloquent::class);
+        $this->app->bind(\Treina\Repositories\MeasuresRepository::class, \Treina\Repositories\MeasuresRepositoryEloquent::class);
+        $this->app->bind(\Treina\Repositories\FoodsRepository::class, \Treina\Repositories\FoodsRepositoryEloquent::class);
+        $this->app->bind(\Treina\Repositories\DietsRepository::class, \Treina\Repositories\DietsRepositoryEloquent::class);
+        $this->app->bind(\Treina\Repositories\DietRepository::class, \Treina\Repositories\DietRepositoryEloquent::class);
+        $this->app->bind(\Treina\Repositories\MeasureRepository::class, \Treina\Repositories\MeasureRepositoryEloquent::class);
+        $this->app->bind(\Treina\Repositories\FoodRepository::class, \Treina\Repositories\FoodRepositoryEloquent::class);
+        $this->app->bind(\Treina\Repositories\PostRepository::class, \Treina\Repositories\PostRepositoryEloquent::class);
         //:end-bindings:
     }
 }

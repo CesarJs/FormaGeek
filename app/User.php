@@ -40,4 +40,7 @@ class User extends Authenticatable
     public function measure(){
         return $this->hasMany(Models\Measure::class, 'user_id', 'id');
     }
+    public function foods(){
+        return $this->hasMany(Models\Food::class, 'user_id', 'id');
+    }
 }
