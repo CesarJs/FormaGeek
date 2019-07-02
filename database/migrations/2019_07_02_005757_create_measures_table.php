@@ -29,6 +29,7 @@ class CreateMeasuresTable extends Migration
             $table->float('hip',8,2)->nullable();
             $table->float('thigh',8,2)->nullable();
             $table->float('calf',8,2)->nullable();
+            $table->text('picture')->nullable();
             $table->timestamps();
 
 
