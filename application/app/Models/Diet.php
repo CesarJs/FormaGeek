@@ -1,17 +1,17 @@
 <?php
 
-namespace Treina\Models\Models;
+namespace Treina\Models;
 
 use Illuminate\Database\Eloquent\Model;
 use Prettus\Repository\Contracts\Transformable;
 use Prettus\Repository\Traits\TransformableTrait;
 
 /**
- * Class Measures.
+ * Class Diet.
  *
  * @package namespace Treina\Models\Models;
  */
-class Measures extends Model implements Transformable
+class Diet extends Model implements Transformable
 {
     use TransformableTrait;
 

@@ -34,8 +34,6 @@ class CreateDietsTable extends Migration
 	 */
 	public function down()
 	{
-		$table->dropForeign(['user_id']);
-		$table->dropForeign(['food_id']);
 		Schema::drop('diets');
 	}
 }

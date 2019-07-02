@@ -227,7 +227,7 @@ return [
     */
     'generator'  => [
         'basePath'      => app()->path(),
-        'rootNamespace' => 'Treina\\Models\\',
+        'rootNamespace' => 'Treina\\',
         'stubsOverridePath' => app()->path(),
         'paths'         => [
             'models'       => 'Models',
