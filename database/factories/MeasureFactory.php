@@ -12,8 +12,8 @@ $factory->define(Measure::class, function (Faker $faker) {
         'chest' => $faker->randomFloat($nbMaxDecimals = 2, $min = 70, $max = 160),
         'waist' => $faker->randomFloat($nbMaxDecimals = 2, $min = 40, $max = 160),
         'abdomen' => $faker->randomFloat($nbMaxDecimals = 2, $min = 40, $max = 160),
-        'weight' => $faker->randomFloat($nbMaxDecimals = 2, $min = 40, $max = 160),
-        'height' => $faker->randomFloat($nbMaxDecimals = 2, $min = 40, $max = 210),
+        'weight' => $faker->randomFloat($nbMaxDecimals = 2, $min = 60, $max = 110),
+        'height' => rand(70,150),
         'user_id' => function () {
             return factory(Treina\User::class)->create()->id;
         }

@@ -24,7 +24,7 @@ class CreateMeasuresTable extends Migration
             $table->float('waist',8,2);
             $table->float('abdomen',8,2);
             $table->float('weight',8,2);
-            $table->float('height',8,2);
+            $table->integer('height');
             $table->float('forearm',8,2)->nullable();
             $table->float('hip',8,2)->nullable();
             $table->float('thigh',8,2)->nullable();
