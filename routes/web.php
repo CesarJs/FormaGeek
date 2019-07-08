@@ -12,6 +12,9 @@
 */
 
 Route::get('/', function () {
+
+	
+
 	$user = Auth::loginUsingId(2, true);
 	$user->weight =  $user->measure->last()->weight;
 	$user->height = $user->measure->last()->height;
