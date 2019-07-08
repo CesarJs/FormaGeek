@@ -12,7 +12,7 @@
 */
 
 Route::get('/', function () {
-	$user = Auth::loginUsingId(1, true);
+	$user = Auth::loginUsingId(2, true);
 	$user->weight =  $user->measure->last()->weight;
 	$user->height = $user->measure->last()->height;
 	$user->neck = $user->measure->last()->neck;
@@ -21,11 +21,8 @@ Route::get('/', function () {
 	$user->hip = $user->measure->last()->hip;
 
 	$user->imc = ($user->measure->last()->weight) / (($user->measure->last()->height*$user->measure->last()->height)/ 10000);
-
-	$user->bf = 86.010*log($user->abdomen - $user->neck) - 70.041 * log($user->weight);
-
-	/*$user->bf_feminino =163.205 * log($user->waist + $user->hip - $user->neck);  (97.684 * log($user->weight) -78.387);*/
-	$user->bf_feminino =163.203*log(45)-97.684*log(65) -87.387;
+	$user->bf = 495/(1.0324-0.19077*(LOG10($user->measure->last()->abdomen-$user->measure->last()->neck))+0.15456*(LOG10($user->measure->last()->height)))-450;
+	$user->bf_feminino =495/(1.29579-0.35004*(LOG10($user->measure->last()->abdomen+$user->measure->last()->waist-$user->measure->last()->neck))+0.221*(LOG10($user->measure->last()->height)))-450;
 
 
 
