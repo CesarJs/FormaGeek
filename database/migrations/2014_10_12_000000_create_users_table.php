@@ -21,6 +21,7 @@ class CreateUsersTable extends Migration
             $table->string('password');
             $table->string('whatsapp')->nullable();
             $table->float('wight',8,2)->nullable();
+            $table->integer('age')->nullable();
             $table->rememberToken();
             $table->timestamps();
         });

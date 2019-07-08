@@ -43,4 +43,7 @@ class User extends Authenticatable
     public function foods(){
         return $this->hasMany(Models\Food::class, 'user_id', 'id');
     }
+    public function metabolism(){
+        return $this->hasOne(Models\Metabolism::class, 'id', 'metabolism_id');
+    }
 }
