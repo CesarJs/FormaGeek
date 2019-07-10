@@ -13,14 +13,15 @@
 
 Route::get('/', function () {
 
-	
 
 	$user = Auth::loginUsingId(1, true);
+
 	$user->weight =  $user->measure->last()->weight;
 	$user->height = $user->measure->last()->height;
 	$user->neck = $user->measure->last()->neck;
 	$user->abdomen = $user->measure->last()->abdomen;
 	$user->waist = $user->measure->last()->waist;
+
 
 
 

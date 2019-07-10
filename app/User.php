@@ -46,4 +46,6 @@ class User extends Authenticatable
     public function metabolism(){
         return $this->hasOne(Models\Metabolism::class, 'id', 'metabolism_id');
     }
+
+    
 }
