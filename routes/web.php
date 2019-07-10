@@ -21,7 +21,7 @@ Route::get('/', function () {
 	$user->neck = $user->measure->last()->neck;
 	$user->abdomen = $user->measure->last()->abdomen;
 	$user->waist = $user->measure->last()->waist;
-	$user->hip = $user->measure->last()->hip;
+
 
 
 	$user->imc = ($user->measure->last()->weight) / (($user->measure->last()->height*$user->measure->last()->height)/ 10000);
@@ -55,3 +55,12 @@ Route::get('/', function () {
 Auth::routes();
 
 Route::get('/home', 'HomeController@index')->name('home');
+
+Route::resource('diets', DietsController::class);
+Route::resource('measures', MeasuresController::class);
+Route::resource('foods', FoodsController::class);
+/*
+Route::name('measures.')->group(function () {
+    Route::get('index', 'MeasuresController@index')->name('index');
+});
+*/

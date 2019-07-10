@@ -1,6 +1,6 @@
 <?php
 
-namespace Treina\Models\Repositories;
+namespace Treina\Repositories;
 
 use Prettus\Repository\Contracts\RepositoryInterface;
 

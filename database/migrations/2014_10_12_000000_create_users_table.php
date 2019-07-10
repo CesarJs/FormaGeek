@@ -23,6 +23,7 @@ class CreateUsersTable extends Migration
             $table->float('wight',8,2)->nullable();
             $table->integer('age')->nullable();
             $table->integer('focus')->nullable();
+            $table->integer('genre')->default(1);
             $table->rememberToken();
             $table->timestamps();
         });

@@ -23,9 +23,7 @@ class RepositoryServiceProvider extends ServiceProvider
      */
     public function boot()
     {
-        $this->app->bind(\Treina\Repositories\MeasuresRepository::class, \Treina\Repositories\MeasuresRepositoryEloquent::class);
-        $this->app->bind(\Treina\Repositories\FoodsRepository::class, \Treina\Repositories\FoodsRepositoryEloquent::class);
-        $this->app->bind(\Treina\Repositories\DietsRepository::class, \Treina\Repositories\DietsRepositoryEloquent::class);
+       
         $this->app->bind(\Treina\Repositories\DietRepository::class, \Treina\Repositories\DietRepositoryEloquent::class);
         $this->app->bind(\Treina\Repositories\MeasureRepository::class, \Treina\Repositories\MeasureRepositoryEloquent::class);
         $this->app->bind(\Treina\Repositories\FoodRepository::class, \Treina\Repositories\FoodRepositoryEloquent::class);

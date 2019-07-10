@@ -1,12 +1,12 @@
 <?php
 
-namespace Treina\Models\Repositories;
+namespace Treina\Repositories;
 
 use Prettus\Repository\Eloquent\BaseRepository;
 use Prettus\Repository\Criteria\RequestCriteria;
-use Treina\Models\Repositories\MeasureRepository;
-use Treina\Models\Models\Measure;
-use Treina\Models\Validators\MeasureValidator;
+use Treina\Repositories\MeasureRepository;
+use Treina\Models\Measure;
+use Treina\Validators\MeasureValidator;
 
 /**
  * Class MeasureRepositoryEloquent.

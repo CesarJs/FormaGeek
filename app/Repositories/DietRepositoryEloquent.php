@@ -1,12 +1,12 @@
 <?php
 
-namespace Treina\Models\Repositories;
+namespace Treina\Repositories;
 
 use Prettus\Repository\Eloquent\BaseRepository;
 use Prettus\Repository\Criteria\RequestCriteria;
-use Treina\Models\Repositories\DietRepository;
-use Treina\Models\Models\Diet;
-use Treina\Models\Validators\DietValidator;
+use Treina\Repositories\DietRepository;
+use Treina\Models\Diet;
+use Treina\Validators\DietValidator;
 
 /**
  * Class DietRepositoryEloquent.

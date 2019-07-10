@@ -1,6 +1,6 @@
 <?php
 
-namespace Treina\Models\Validators;
+namespace Treina\Validators;
 
 use \Prettus\Validator\Contracts\ValidatorInterface;
 use \Prettus\Validator\LaravelValidator;

@@ -1,16 +1,16 @@
 <?php
 
-namespace Treina\Models\Http\Controllers;
+namespace Treina\Http\Controllers;
 
 use Illuminate\Http\Request;
 
 use Treina\Http\Requests;
 use Prettus\Validator\Contracts\ValidatorInterface;
 use Prettus\Validator\Exceptions\ValidatorException;
-use Treina\Http\Requests\DietsCreateRequest;
-use Treina\Http\Requests\DietsUpdateRequest;
-use Treina\Models\Repositories\DietsRepository;
-use Treina\Models\Validators\DietsValidator;
+use Treina\Http\Requests\DietCreateRequest;
+use Treina\Http\Requests\DietUpdateRequest;
+use Treina\Repositories\DietRepository;
+use Treina\Validators\DietValidator;
 
 /**
  * Class DietsController.
@@ -35,7 +35,7 @@ class DietsController extends Controller
      * @param DietsRepository $repository
      * @param DietsValidator $validator
      */
-    public function __construct(DietsRepository $repository, DietsValidator $validator)
+    public function __construct(DietRepository $repository, DietValidator $validator)
     {
         $this->repository = $repository;
         $this->validator  = $validator;

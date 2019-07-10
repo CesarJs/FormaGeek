@@ -1,16 +1,16 @@
 <?php
 
-namespace Treina\Models\Http\Controllers;
+namespace Treina\Http\Controllers;
 
 use Illuminate\Http\Request;
 
 use Treina\Http\Requests;
 use Prettus\Validator\Contracts\ValidatorInterface;
 use Prettus\Validator\Exceptions\ValidatorException;
-use Treina\Http\Requests\MeasuresCreateRequest;
-use Treina\Http\Requests\MeasuresUpdateRequest;
-use Treina\Models\Repositories\MeasuresRepository;
-use Treina\Models\Validators\MeasuresValidator;
+use Treina\Http\Requests\MeasureCreateRequest;
+use Treina\Http\Requests\MeasureUpdateRequest;
+use \Treina\Repositories\MeasureRepository;
+use \Treina\Validators\MeasureValidator;
 
 /**
  * Class MeasuresController.
@@ -35,7 +35,7 @@ class MeasuresController extends Controller
      * @param MeasuresRepository $repository
      * @param MeasuresValidator $validator
      */
-    public function __construct(MeasuresRepository $repository, MeasuresValidator $validator)
+    public function __construct(MeasureRepository $repository,  MeasureValidator $validator)
     {
         $this->repository = $repository;
         $this->validator  = $validator;
