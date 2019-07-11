@@ -6,54 +6,64 @@
         <div class="col-md-8">
                 <div class="card">
                     <div class="card-header">
-                        <form action="{{route('measures.create')}}" class="form">
+                        <div class="row text-center">
+                          @include('alerts._alert')
+                        </div>
+                        <form action="{{route('measures.store')}}" method="POST" class="form">
+                            {{csrf_field()}}
                             <div class="form-row">
-                                <div class="col-sm-2 col-3 mb-1">
+                                <div class="col-sm-2 col-4 mb-2">
                                     <label for="weight">Peso</label>
-                                    <input type="text" class="form-control" id="weight" id="weight" placeholder="Peso" value=" {{Auth::user()->measure->last()->weight}}" required>
+                                    <input type="text" class="form-control" id="weight" name="weight" placeholder="Peso" value=" {{Auth::user()->measure->last()->weight}}" required>
                                 </div>
-                                <div class="col-sm-2 col-3 mb-1">
+                                <div class="col-sm-2 col-4 mb-2">
                                     <label for="abdomen">Abdomen</label>
                                     <input type="text" class="form-control" id="abdomen" name="abdomen" placeholder="Abdomen" value=" {{Auth::user()->measure->last()->abdomen}}" required>
                                 </div>
-                                <div class="col-sm-2 col-3 mb-1">
+                                <div class="col-sm-2 col-4 mb-2">
                                     <label for="neck">Pescoço</label>
                                     <input type="text" class="form-control" id="neck" name="neck" placeholder="Pescoço" value=" {{Auth::user()->measure->last()->neck}}" required>
                                 </div>
+                                <div class="col-sm-2 col-4 mb-2">
+                                    <label for="arm">Braço</label>
+                                    <input type="text" class="form-control" id="arm" name="arm" placeholder="Braço" value=" {{Auth::user()->measure->last()->arm}}" required>
+                                </div>
                                 @if(Auth::user()->genre == 2)
-                                <div class="col-sm-2 col-3 mb-1">
+                                <div class="col-sm-2 col-4 mb-2">
+                                    <label for="waist">Quadril</label>
+                                    <input type="text" class="form-control" id="waist" name="waist" placeholder="Quadril" value=" {{Auth::user()->measure->last()->waist}}" required>
+                                </div>
+                                @endif
+                                <div class="col-sm-2 col-4 mb-2">
+                                    <label for="height">Altura</label>
+                                    <input type="text" class="form-control" id="height" name="height" placeholder="Altura" value=" {{Auth::user()->measure->last()->height}}" required>
+                                </div>
+                                <div class="col-sm-2 col-4 mb-2">
+                                    <label for="chest">Peito</label>
+                                    <input type="text" class="form-control" id="chest" name="chest" placeholder="Peito" value=" {{Auth::user()->measure->last()->chest}}" required>
+                                </div>
+                                <div class="col-sm-2 col-4 mb-2">
+                                    <label for="thigh">Coxa</label>
+                                    <input type="text" class="form-control" id="thigh" name="thigh" placeholder="Coxa" value=" {{Auth::user()->measure->last()->thigh}}" required>
+                                </div>
+                                <div class="col-sm-2 col-4 mb-2">
+                                    <label for="calf">Panturrilha</label>
+                                    <input type="text" class="form-control" id="calf" name="calf" placeholder="Panturrilha" value=" {{Auth::user()->measure->last()->calf}}" required>
+                                </div>
+                                 @if(Auth::user()->genre == 1)
+                                <div class="col-sm-2 col-4 mb-2">
                                     <label for="waist">Quadril</label>
                                     <input type="text" class="form-control" id="waist" name="waist" placeholder="Quadril" value=" {{Auth::user()->measure->last()->waist}}" required>
                                 </div>
                                 @endif
                             </div>
                             <div class="form-row">
-                                <div class="col-sm-2 col-3 mb-1">
-                                    <label for="height">Altura</label>
-                                    <input type="text" class="form-control" id="height" id="height" placeholder="Altura" value=" {{Auth::user()->measure->last()->height}}" required>
-                                </div>
-                                <div class="col-sm-2 col-3 mb-1">
-                                    <label for="arm">Braço</label>
-                                    <input type="text" class="form-control" id="arm" name="arm" placeholder="Braço" value=" {{Auth::user()->measure->last()->arm}}" required>
-                                </div>
-                                <div class="col-sm-2 col-3 mb-1">
-                                    <label for="chest">Peito</label>
-                                    <input type="text" class="form-control" id="chest" name="chest" placeholder="Peito" value=" {{Auth::user()->measure->last()->chest}}" required>
-                                </div>
-                                <div class="col-sm-2 col-3 mb-1">
-                                    <label for="thigh">Coxa</label>
-                                    <input type="text" class="form-control" id="thigh" name="thigh" placeholder="Coxa" value=" {{Auth::user()->measure->last()->thigh}}" required>
-                                </div>
-                                <div class="col-sm-2 col-3 mb-1">
-                                    <label for="calf">Panturrilha</label>
-                                    <input type="text" class="form-control" id="calf" name="calf" placeholder="Panturrilha" value=" {{Auth::user()->measure->last()->calf}}" required>
-                                </div>
-                                 @if(Auth::user()->genre == 1)
-                                <div class="col-sm-2 col-3 mb-1">
-                                    <label for="waist">Quadril</label>
-                                    <input type="text" class="form-control" id="waist" name="waist" placeholder="Quadril" value=" {{Auth::user()->measure->last()->waist}}" required>
-                                </div>
-                                @endif
+                              <div class="col-sm-6 col-6 mb-2 text-center">
+                                 <button type="submit" class="btn btn-success btn-lg mb-2">Salvar</button> 
+                              </div>
+                              <div class="col-sm-6 col-6 mb-2 text-center">
+                                 <button type="reset" class="btn btn-secondary btn-lg mb-2">Voltar</button> 
+                              </div>
                             </div>
                         </form>
                     </div>
@@ -89,7 +99,7 @@
                                           <td>{{$m->abdomen>0?$m->abdomen:'x'}}</td>
                                           <td>{{$m->neck>0?$m->neck:'x'}}</td>
                                           <td>{{$m->arm>0?$m->arm:'x'}}</td>
-                                          <td>{{$m->coxa>0?$m->coxa:'x'}}</td>
+                                          <td>{{$m->thigh>0?$m->thigh:'x'}}</td>
                                         </tr>
                                         @empty
                                         <tr>

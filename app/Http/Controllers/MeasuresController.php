@@ -70,16 +70,19 @@ class MeasuresController extends Controller
      *
      * @throws \Prettus\Validator\Exceptions\ValidatorException
      */
-    public function store(MeasuresCreateRequest $request)
+    public function store(MeasureCreateRequest $request)
     {
+
         try {
 
             $this->validator->with($request->all())->passesOrFail(ValidatorInterface::RULE_CREATE);
-
-            $measure = $this->repository->create($request->all());
+            $data= $request->all();
+            unset($data['_token']);
+            $data['user_id']=\Auth::user()->id;
+            $measure = $this->repository->create($data);
 
             $response = [
-                'message' => 'Measures created.',
+                'message' => 'Medida cadastrada com sucesso!',
                 'data'    => $measure->toArray(),
             ];
 
@@ -87,7 +90,6 @@ class MeasuresController extends Controller
 
                 return response()->json($response);
             }
-
             return redirect()->back()->with('message', $response['message']);
         } catch (ValidatorException $e) {
             if ($request->wantsJson()) {

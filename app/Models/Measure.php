@@ -20,6 +20,22 @@ class Measure extends Model implements Transformable
      *
      * @var array
      */
-    protected $fillable = [];
+    protected $fillable = [
+    	'measures',
+		'id',
+		'user_id',
+		'neck',
+		'arm',
+		'chest',
+		'waist',
+		'abdomen',
+		'weight',
+		'height',
+		'forearm',
+		'hip',
+		'thigh',
+		'calf',
+		'picture',
+    ];
 
 }
