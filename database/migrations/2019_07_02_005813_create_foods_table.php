@@ -26,7 +26,8 @@ class CreateFoodsTable extends Migration
             $table->float('sodium',8,2)->nullable();
             $table->float('potassium',8,2)->nullable();
             $table->float('cholesterol',8,2)->nullable();
-            $table->float('portopm',8,2);
+            $table->float('fat',8,2);
+            $table->float('value_biologic',8,2)->nullable();
             $table->integer('status')->default(1);
 
             $table->timestamps();

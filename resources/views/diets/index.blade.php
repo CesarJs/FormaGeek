@@ -7,9 +7,6 @@
                 <div class="card">
                     <div class="card-header">
                         <div class="row text-center">
-                          <div class="col-12">
-                              <h5>Atualizar medidas</h5>
-                          </div>
                           @include('alerts._alert')
                         </div>
                         <form action="{{route('measures.store')}}" method="POST" class="form">

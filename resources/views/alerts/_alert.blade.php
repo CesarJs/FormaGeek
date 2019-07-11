@@ -1,5 +1,4 @@
 <div class="col-12" style="cursor: pointer;">
-  <h5>Atualizar medidas</h5>
   @if(Session::get('message'))
   <p class="alert alert-success" onClick="$('.alert').alert('close');">
     {{Session::get('message')}}

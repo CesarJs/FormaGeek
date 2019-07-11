@@ -20,6 +20,19 @@ class Food extends Model implements Transformable
      *
      * @var array
      */
-    protected $fillable = [];
+    protected $fillable = [
+    		'user_id',
+			'name',
+			'calories',
+			'proteins',
+			'carbo',
+			'fiber',
+			'sodium',
+			'potassium',
+			'cholesterol',
+			'fat',
+			'value_biologic',
+			'status',
+    ];
 
 }

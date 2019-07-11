@@ -15,7 +15,7 @@ $factory->define(Food::class, function (Faker $faker) {
         'sodium' => $faker->randomFloat($nbMaxDecimals = 2, $min = 0, $max = 300),
         'potassium' => $faker->randomFloat($nbMaxDecimals = 2, $min = 0, $max = 300),
         'cholesterol' => $faker->randomFloat($nbMaxDecimals = 2, $min = 0, $max = 300),
-        'portopm' => $faker->randomFloat($nbMaxDecimals = 2, $min = 0, $max = 300),
+        'fat' => $faker->randomFloat($nbMaxDecimals = 2, $min = 0, $max = 300),
         'status' => 1,
         'user_id' => function () {
             return factory(Treina\User::class)->create()->id;

@@ -70,16 +70,18 @@ class FoodsController extends Controller
      *
      * @throws \Prettus\Validator\Exceptions\ValidatorException
      */
-    public function store(FoodsCreateRequest $request)
+    public function store(FoodCreateRequest $request)
     {
         try {
 
             $this->validator->with($request->all())->passesOrFail(ValidatorInterface::RULE_CREATE);
-
-            $food = $this->repository->create($request->all());
+            $data= $request->all();
+            unset($data['_token']);
+            $data['user_id']=\Auth::user()->id;
+            $food = $this->repository->create($data);
 
             $response = [
-                'message' => 'Foods created.',
+                'message' => 'Alimento adicionado com sucesso!',
                 'data'    => $food->toArray(),
             ];
 
