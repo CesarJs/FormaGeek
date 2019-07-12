@@ -22,4 +22,10 @@ class Meal extends Model implements Transformable
      */
     protected $fillable = [];
 
+
+    public function diets()
+    {
+        return $this->belongsToMany('Treina\Models\Diet','diet_meal');
+    }
+
 }

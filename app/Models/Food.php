@@ -35,4 +35,11 @@ class Food extends Model implements Transformable
 			'status',
     ];
 
+   
+
+    public function meals()
+    {
+        return $this->belongsToMany('Treina\Models\Meal','meal_food');
+    }
+
 }

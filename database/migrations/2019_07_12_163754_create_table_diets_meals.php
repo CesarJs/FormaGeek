@@ -13,7 +13,7 @@ class CreateTableDietsMeals extends Migration
      */
     public function up()
     {
-        Schema::create('diets_meals', function (Blueprint $table) {
+        Schema::create('diet_meal', function (Blueprint $table) {
             $table->bigIncrements('id');
             $table->bigInteger('diet_id')->unsigned();
             $table->bigInteger('meal_id')->unsigned();
@@ -32,6 +32,6 @@ class CreateTableDietsMeals extends Migration
     public function down()
     {
         Schema::disableForeignKeyConstraints();
-        Schema::dropIfExists('diets_meals');
+        Schema::dropIfExists('diet_meal');
     }
 }

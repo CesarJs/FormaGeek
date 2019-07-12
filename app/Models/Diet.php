@@ -22,4 +22,6 @@ class Diet extends Model implements Transformable
      */
     protected $fillable = [];
 
+   
+
 }
