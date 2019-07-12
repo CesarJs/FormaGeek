@@ -18,12 +18,13 @@ class CreateDietsTable extends Migration
 		Schema::create('diets', function(Blueprint $table) {
             $table->bigIncrements('id');
             $table->bigInteger('user_id')->unsigned();
-            $table->bigInteger('food_id')->unsigned();
+            $table->string('name',100);
+            //$table->bigInteger('food_id')->unsigned();
 
             $table->timestamps();
 
             $table->foreign('user_id')->references('id')->on('users');
-            $table->foreign('food_id')->references('id')->on('foods');
+            //$table->foreign('food_id')->references('id')->on('foods');
 		});
 	}
 
@@ -34,6 +35,7 @@ class CreateDietsTable extends Migration
 	 */
 	public function down()
 	{
+		Schema::disableForeignKeyConstraints();
 		Schema::drop('diets');
 	}
 }

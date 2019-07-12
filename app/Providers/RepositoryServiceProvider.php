@@ -29,6 +29,7 @@ class RepositoryServiceProvider extends ServiceProvider
         $this->app->bind(\Treina\Repositories\FoodRepository::class, \Treina\Repositories\FoodRepositoryEloquent::class);
         $this->app->bind(\Treina\Repositories\PostRepository::class, \Treina\Repositories\PostRepositoryEloquent::class);
         $this->app->bind(\Treina\Repositories\MetabolismRepository::class, \Treina\Repositories\MetabolismRepositoryEloquent::class);
+        $this->app->bind(\Treina\Repositories\MealRepository::class, \Treina\Repositories\MealRepositoryEloquent::class);
         //:end-bindings:
     }
 }

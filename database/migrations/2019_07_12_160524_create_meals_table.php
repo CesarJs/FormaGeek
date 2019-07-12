@@ -4,9 +4,9 @@ use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Database\Migrations\Migration;
 
 /**
- * Class CreateMetabolismsTable.
+ * Class CreateMealsTable.
  */
-class CreateMetabolismsTable extends Migration
+class CreateMealsTable extends Migration
 {
 	/**
 	 * Run the migrations.
@@ -15,11 +15,13 @@ class CreateMetabolismsTable extends Migration
 	 */
 	public function up()
 	{
-		Schema::create('metabolisms', function(Blueprint $table) {
-            $table->increments('id');
-            $table->float('multiply',8,3);
-            $table->text('description')->nullable();
+		Schema::create('meals', function(Blueprint $table) {
+            $table->bigIncrements('id');
+            $table->string('name',100);
+            $table->integer('day')->default(1);
             $table->timestamps();
+
+  
 		});
 	}
 
@@ -31,6 +33,6 @@ class CreateMetabolismsTable extends Migration
 	public function down()
 	{
 		Schema::disableForeignKeyConstraints();
-		Schema::drop('metabolisms');
+		Schema::drop('meals');
 	}
 }
