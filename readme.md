@@ -1,6 +1,6 @@
 A ideia inicial seria desenvolver uma comunidade para compartilhamentos de informações sobre assuntos de academia, onde os usuários poderiam cadastrar suas informações
 podendo obter retornos de métricas do seu corpo imc,bf,massa gorda, massa magra, o sistema ficaria responsável por manter esses dados e gerar um relatório demonstrando
-resultados obtidos por períodos, com gráficos, além de auxilio no calculo basal e também poderia montar dietas no site,treinos, etc.
+resultados obtidos por períodos, com gráficos, além de auxilio no calculo metabólico basal e também poderia montar dietas no site,treinos, etc.
 
 Os registros devem ser feitos de forma simples por computador ou celular, exemplo um formulário com validação de dados e mascara para não confundir o usuário que também poderá inserir fotos do seu shape para que o sistema também faça uma progressão cronológica mostrando resultados obtidos.
 
